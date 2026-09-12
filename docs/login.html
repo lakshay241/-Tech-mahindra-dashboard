@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tech Mahindra | Secure Login</title>
+
+    <link rel="stylesheet" href="./login.css">
+    <script src="./auth.js"></script>
+
+    <script>
+        if (typeof isAuthenticated === "function" && isAuthenticated()) {
+            window.location.replace("index.html");
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="login-background"></div>
+
+    <!-- DARK RED OVERLAY -->
+    <div class="red-overlay"></div>
+
+    <!-- TECH GRID -->
+    <div class="tech-grid"></div>
+
+    <!-- RED LIGHT EFFECTS -->
+    <div class="red-glow glow-one"></div>
+    <div class="red-glow glow-two"></div>
+    <div class="red-glow glow-three"></div>
+
+    <!-- DIAGONAL TECH LINES -->
+    <div class="diagonal-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- LOGIN WRAPPER -->
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <!-- BRAND -->
+            <div class="brand-section">
+
+                <div class="brand-logo">
+                    TM
+                </div>
+
+                <div class="brand-name">
+                    <span>TECH</span> MAHINDRA
+                </div>
+
+                <div class="brand-subtitle">
+                    DIGITAL ENTERPRISE
+                </div>
+
+                <div class="secure-status">
+                    <span class="status-dot"></span>
+                    SECURE COMMAND CENTER
+                </div>
+
+            </div>
+
+
+            <!-- WELCOME -->
+            <div class="welcome-section">
+
+                <h1>
+                    Welcome back,
+                    <strong>Lakshay</strong>
+                </h1>
+
+                <p>
+                    Sign in to access your enterprise dashboard.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+            <form id="loginForm" autocomplete="off">
+
+                <!-- USERNAME -->
+                <div class="form-group">
+
+                    <label for="username">
+                        USERNAME
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M20 21C20 17.6863 17.3137 15 14 15H10C6.68629 15 4 17.6863 4 21"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="7"
+                                    r="4"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </span>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            value="Lakshay"
+                            placeholder="Enter username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="password">
+                        PASSWORD
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect
+                                    x="4"
+                                    y="10"
+                                    width="16"
+                                    height="11"
+                                    rx="2"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+
+                                <path
+                                    d="M8 10V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V10"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="15.5"
+                                    r="1"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="showPassword"
+                            class="show-password"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ERROR -->
+                <div
+                    id="loginError"
+                    class="login-error"
+                ></div>
+
+
+                <!-- LOGIN BUTTON -->
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    <span>ENTER DASHBOARD</span>
+                    <span class="button-arrow">→</span>
+                </button>
+
+            </form>
+
+
+            <!-- SECURITY -->
+            <div class="security-note">
+
+                <span class="security-icon">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12 3L20 6V11C20 16.2 16.8 20.4 12 22C7.2 20.4 4 16.2 4 11V6L12 3Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                        />
+
+                        <path
+                            d="M9 12L11 14L15 10"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </span>
+
+                <span>
+                    Secure enterprise authentication
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- SLOGAN -->
+        <div class="future-text">
+
+            <span>Together for a</span>
+
+            <strong>
+                Brighter Future
+            </strong>
+
+            <div class="future-line"></div>
+
+        </div>
+
+    </main>
+
+
+    <script src="./login.js"></script>
+
+</body>
+</html>
